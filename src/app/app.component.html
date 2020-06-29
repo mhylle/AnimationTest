@@ -1,0 +1,10 @@
+<div>
+  <div *ngFor="let data of data">
+    <div class="header" (click)="toggleData(data)">{{data.name}}</div>
+    <div [@openClose]="data.showData ? 'open' : 'closed'">
+      <div *ngFor="let internalData of data.data " class="content">
+        {{internalData}}
+      </div>
+    </div>
+  </div>
+</div>
